@@ -10,7 +10,8 @@
   "dependencies": {
     "qiankun": "^2.6.3",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "zone.js": "^0.11.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",

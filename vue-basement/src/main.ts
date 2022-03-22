@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import router from "./router/index";
 import App from "./App.vue";
+import "zone.js";
 import { registerMicroApps, start } from "qiankun";
 
 registerMicroApps([
@@ -12,7 +13,7 @@ registerMicroApps([
   },
   {
     name: "angular app",
-    entry: "//localhost:4200",
+    entry: "//localhost:8089",
     container: "#subapp-container",
     activeRule: "/app-angular",
   },
