@@ -1,18 +1,52 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <div class="masonry">
+      <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+       <div class="item">
+        <img src="https://picsum.photos/360/460?random=1">
+      </div>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+<script>
+// @ is an alias to /src
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class HomeView extends Vue {}
+export default {
+  name: 'HomeView',
+}
 </script>
+<style scoped>
+.masonry {
+  column-count: 4;
+  column-gap: 0;
+}
+.item {
+  padding: 2px;
+}
+.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+</style>

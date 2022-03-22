@@ -1,5 +1,67 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <ul class="stacks">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
 </template>
+<style lang="scss" scoped>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul.stacks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+ul.stacks li {
+  background-color: #ccc;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+ul.stacks li::after {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul.stacks li {
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      &::after {
+        left: calc(#{$i - 1} * -10vw);
+      }
+      transition-delay: calc(#{$i} * .06s);
+    }
+  }
+  transition: 1s transform ease-in-out;
+}
+
+ul.stacks:hover li {
+  transform: translateY(-100vh);
+}
+
+</style>

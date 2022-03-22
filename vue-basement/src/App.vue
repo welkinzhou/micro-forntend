@@ -11,6 +11,7 @@
     </div>
     <div class="content">
       <router-view />
+      <div id="subapp-container"></div>
     </div>
   </div>
 </template>
