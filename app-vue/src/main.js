@@ -8,7 +8,6 @@ let router = null;
 let instance = null;
 function render(props = {}) {
   const { container } = props;
-  console.log(container);
   router = createRouter({
     history: createWebHistory(
       window.__POWERED_BY_QIANKUN__ ? "/app-vue/" : "/"
