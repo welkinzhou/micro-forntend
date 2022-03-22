@@ -29,15 +29,17 @@
 
 下面是我们打包出来的目录结构。可以看到，只有一个名为 index 的 html 文件，并不能看到我们开发时候，创建的各种页面。
 
-![打包结果](./img/dist.png)
+<div align="left">
+  <img src="./img/dist.png" width="300"/>
+</div>
 
 ```
 dist
-├── css
-├── favicon.ico
-├── img
-├── index.html
-└── js
+├── css               ------------> css 文件打包后的目录
+├── favicon.ico       ------------> 浏览器 tab icon
+├── img               ------------> 图片打包后目录
+├── index.html        ------------> 入口文件
+└── js                ------------> js 打包文件以及 source-map 描述文件所在目录
 ```
 
 也就是说，单页面是针对服务部署而言的，在服务器上始终只有一个 index 页面。
