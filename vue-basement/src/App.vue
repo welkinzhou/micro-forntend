@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div id="app">
@@ -7,7 +6,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/app-vue">Sub-Vue</router-link> |
-       <router-link to="/app-angular">Sub-Angular</router-link>
+      <router-link to="/app-angular">Sub-Angular</router-link>
     </div>
     <div class="content">
       <router-view />
@@ -29,11 +28,6 @@
   color: #2c3e50;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 #nav {
@@ -50,5 +44,6 @@
   flex: 1;
   background: #f1f1f1;
   padding-top: 24px;
+  box-sizing: border-box;
 }
 </style>
